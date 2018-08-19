@@ -1,6 +1,6 @@
 # 命令行汇总
 
-##Linux
+## Linux
 
 **查看当前路径**
 
@@ -28,9 +28,21 @@ touch xx/fileName
 chown -R 变更后的拥有者: fileName/dirName
 ```
 
+**查看端口**
+
+```bash
+lsof -i tcp:端口
+```
+
+**kill进程**
+
+```bash
+kill 进程PID
+```
+
 ---
 
-##vim
+## vim
 
 **退出vim**
 
@@ -56,7 +68,7 @@ chown -R 变更后的拥有者: fileName/dirName
 
 ---
 
-##Git
+## Git
 
 **查看远程分支**
 
@@ -72,7 +84,19 @@ git branch -a
 git branch origin/xxx -b xxx
 ```
 
-##npm
+**添加远程仓库**
+
+```bash
+git remote add origin git地址
+```
+
+**查看远程仓库**
+
+```bash
+git remote -v
+```
+
+## npm
 
 **使用淘宝镜像**
 
