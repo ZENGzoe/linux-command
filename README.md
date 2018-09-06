@@ -84,6 +84,12 @@ git branch -a
 git branch origin/xxx -b xxx
 ```
 
+**删掉远程仓库**
+
+```bash
+git remote rm origin
+```
+
 **添加远程仓库**
 
 ```bash
@@ -94,6 +100,20 @@ git remote add origin git地址
 
 ```bash
 git remote -v
+```
+
+**合并分支**
+
+如讲dev的代码合并到master：
+```
+git merge dev
+```
+
+**生成ssh公钥**
+
+```
+cd ~/.ssh
+ssh-keygen
 ```
 
 ## npm
