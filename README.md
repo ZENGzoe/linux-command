@@ -116,6 +116,18 @@ cd ~/.ssh
 ssh-keygen
 ```
 
+**删除submodule**
+
+```
+# 
+git submodule deinit 子模块名
+# 删除.gitmodules中记录的模块信息（--cached选项清除.git/modules中的缓存）
+git rm --cached 子模块名
+# 提交记录
+git add .
+
+```
+
 ## npm
 
 **使用淘宝镜像**
@@ -123,3 +135,116 @@ ssh-keygen
 ```bash
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
+
+## mysql
+
+**登陆*
+
+```bash
+mysql -uroot -p
+//输入密码
+```
+
+**退出**
+
+```
+exit
+```
+
+**查看版本号**
+
+```
+mysql>status
+```
+
+### 数据库操作
+
+**创建数据库**
+
+```
+create database 数据库名称;
+```
+
+**查看数据库**
+
+```
+show database;
+```
+
+**删除数据库**
+
+```
+drop database 数据库名称;
+```
+
+**打开数据库**
+
+```
+use 数据库名称;
+```
+
+### 数据表操作
+
+**显示某个数据库中所有表**
+
+```
+show tables;
+```
+
+**显示数据表的结构**
+
+```
+desc 表名;
+```
+
+### 创建后表的修改
+
+**修改列**
+
+```
+alter table 表名 change 列名称 新列名称 新数据类型;
+
+//eg:
+
+alter table book_lists change author author varchar(45) not null;
+
+```
+
+**添加新列**
+
+```
+alter table 表名 add 列名称 数据类型;
+
+//eg:
+
+alter table users add nickName varchar(50) not null;
+```
+
+### 数据操作
+
+**查询数据**
+
+```
+select * from 表名 where 字段=值;
+//or
+select 列名 from 表名 where 字段=值;
+```
+
+**删除数据**
+
+```
+delete from 表名 where 字段=值;
+```
+
+**更新数据**
+
+如果没有该数据，insert新数据，如果有，则更新数据。
+
+```
+replace into 表名 set 字段=值，字段=值...(字段中需有唯一的属性);
+```
+
+
+
+
+
