@@ -22,7 +22,7 @@ touch fileName
 touch xx/fileName
 ```
 
-**变更文件的拥有者**
+**变更文件的拥有者/权限**
 
 ```bash
 chown -R 变更后的拥有者: fileName/dirName
@@ -45,6 +45,12 @@ kill 进程PID
 ```bash
 //用于对web站点做压力测试，-c为一次发送的请求数量及并发量、-n为请求次数
 ab -c100 -n100
+```
+
+**列出文件下的所有文件信息**
+
+```
+ll -a
 ```
 
 ---
